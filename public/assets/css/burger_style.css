@@ -1,0 +1,38 @@
+body {
+  background-color: orange;
+}
+
+.main-container {
+  text-align: center;
+}
+
+.header img.header-img {
+  width: 300px;
+}
+
+.dinning-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.burger-row div {
+  margin: 5px 0;
+}
+.burger-row .burger {
+  font-size: 12px;
+}
+.column {
+  text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.add-burger-ta textarea {
+  width: 400px;
+  height: 100px;
+  max-width: 95%;
+}

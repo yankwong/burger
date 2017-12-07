@@ -1,0 +1,11 @@
+<div class="row burger-row" data-id={{id}}>
+  {{#if devoured}}
+    <div class="column col-4 hidden burger active">{{burger_name}}</div>
+    <div class="column col-4 hidden devour-action"><button data-id="{{id}}" class="eat-btn">Devour it!</button></div>
+    <div class="column col-4 burger eaten">{{burger_name}}</div>
+  {{else}}
+    <div class="column col-4 burger active">{{burger_name}}</div>
+    <div class="column col-4 devour-action"><button data-id="{{id}}" class="btn btn-outline-primary eat-btn">Devour it!</button></div>
+    <div class="column col-4 burger eaten hidden">{{burger_name}}</div>
+  {{/if}}
+</div>

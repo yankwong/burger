@@ -1,2 +1,18 @@
-<div>Burger is good</div>
-<div>{{burger}}</div>
+<div class="main-container container">
+  <div class="header">
+    <img class="header-img" src="assets/img/burger_header.png" alt="burger logo">
+    <h1>Eat-Da-Burger!</h1>
+  </div>
+
+  <div class="dinning-area">
+    {{#each burgers}}
+      {{> burgers/burger-block}}
+    {{/each}}
+  </div>
+
+  <div class="add-burger-area">
+    <div class="add-burger-ta"><textarea name="new-burger"></textarea></div>
+    <div class="submit-btn-row"><button class="btn btn-primary add-burger-btn">Submit</button></div>
+    <p>Enter a burger you want to eat. Click the "submit" button</p>
+  </div>
+</div>
