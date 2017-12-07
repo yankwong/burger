@@ -8,7 +8,7 @@ var burger = {
     });
   },
   insert: function(valObj, callback) {
-    orm.selectAll(DB_TABLE, valObj, function(data) {
+    orm.insertOne(DB_TABLE, valObj, function(data) {
       callback(data);
     });
   },

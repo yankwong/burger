@@ -11,20 +11,23 @@ router.get("/", function(req, res) {
     var hbsObj = {
       burgers : data
     };
-    //res.json(hbsObj);
     res.render('index', hbsObj);
   });
 });
 
 router.post("/api/new", function(req, res) {
-  // cat.create([
-  //   "name", "sleepy"
-  // ], [
-  //   req.body.name, req.body.sleepy
-  // ], function(result) {
-  //   // Send back the ID of the new quote
-  //   res.json({ id: result.insertId });
-  // });
+  var data = req.body,
+      burgerName = '';
+      
+  if (typeof data.name !== 'undefinied' || data.name.trim() !== '') {
+    burgerName = data.name.trim();
+
+    burger.insert({
+      name : burgerName
+    }, function(data) {
+      res.json(data);
+    });
+  } 
 });
 
 router.post("/api/devour", function(req, res) {

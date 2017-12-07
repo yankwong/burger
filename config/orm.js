@@ -15,8 +15,8 @@ var orm = {
     });
   },
   insertOne: function(table, valueObj, callback) {
-    var queryString = "INSERT INTO ?? (`burger_name`, `devoured`, `date`) VALUES (??, ??, NOW());";
-    connection.query(queryString, [table, valueObj.name, valueObj.devoured], function(err, result) {
+    var queryString = "INSERT INTO ?? (`burger_name`, `devoured`, `date`) VALUES (?, '0', NOW());";
+    connection.query(queryString, [table, valueObj.name], function(err, result) {
       if (!err) {
         callback(result);
       }
